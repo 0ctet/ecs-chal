@@ -210,6 +210,8 @@ def define_ecs_admin(app):
 
             ecs.active_vpc = request.form.to_dict(flat=False).get("active_vpc")[0]
 
+            ecs.cluster = request.form.to_dict(flat=False).get("cluster")[0]
+
             ecs.filter_tag = request.form.to_dict(flat=False).get("filter_tag")[0]
 
             ecs.guide_enabled = "true" == request.form.get("guide_enabled", False)

@@ -8,4 +8,6 @@ RUN python -m pip install -r ./requirements.txt
 
 COPY ecs_challenges /opt/CTFd/CTFd/plugins/ecs_challenges
 
+RUN chown -R 1001:1001 /opt/CTFd/CTFd/plugins/ecs_challenges
+
 USER 1001
